@@ -91,39 +91,13 @@ Officially prohibited within non-function blocks such as (if statement)
 const func = () => {} // function declaration
 Functions defined via Functions Expressions can be named or anonymous. Does not start with function
 
-<li> self invoking function</li>
+<li> Immediately Invoked Function Expression(IIFE)</li>
 function expression will execute automatically if the execution is followed by (). Can't self invoke function declarations
 (function () {
   var x = "Hello!!";      // I will invoke myself
 })();
+
 </ol>
 
 <h3>Application Programming Interfaces (APIs)</h3>
 
-<h3>Differences between ES5 and ES6</h3>
-<ol>
-<li>Fat Arrow Functions</li>
-const example = (arg) => {};
-
-<li> Default parameters </li>
-function multiply(a, b = 1) {
-  return a * b;
-}
-<li> Method definitinos </li>
- //ES5
- var obj = {
-     foo: foo(){ return 'bar'}
- };
- //ES6
- var obj = {    
-     foo(){return 'bar'}
- }
-
- <li>rest parameters</li>
- indefinite number of arguments
- function sum(...theArgs) {
-  return theArgs.reduce((previous, current) => {
-    return previous + current;
-  });
-}
-(5)
