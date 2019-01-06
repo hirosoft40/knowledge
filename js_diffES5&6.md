@@ -29,7 +29,7 @@ Classes are special functions. The class syntax has class expression and class d
 <h3>[1]class declarations </h3>
 Use class keyword with the name of the class. Class declarations are not hoisted like function declarations. Hence, first declare class and then access it.
 <h4>+++ ES6 +++</h4>
-class Person {
+<code>class Person {
   constructor(name, age, gender){
     this.name = name;
     this.age = age;
@@ -52,7 +52,7 @@ class Personal extends Person{
     console.log(this.age);
   }
 }
-
+</code>
 <h4>+++ ES5 +++</h4>
 function Person (name, age, gender){
   this.name = name;
@@ -132,49 +132,49 @@ function multiply(a, b = 1) {
 }
 
 <h2><li>Spread Syntax (...)</li></h2>
-[reference] <a href='https://codeburst.io/javascript-es6-the-spread-syntax-f5c35525f754'>Medium blog by Brandon Morelli</a>
+[reference] <a href='https://codeburst.io/javascript-es6-the-spread-syntax-f5c35525f754'>Medium blog by Brandon Morelli</a><br>
 It allows an iterable to expand in places where 0+ arguments are expected.
 
 <ul>
 <h3><li>Inserting Arrays</li></h3>
-* without spread syntax *
-var mid = [3,4];
-var arr = [1,2,mid,5,6] 
-console.log(arr); // [1,2,[3,4],5,6] 
+* without spread syntax *<br>
+var mid = [3,4];<br>
+var arr = [1,2,mid,5,6] <br>
+console.log(arr); // [1,2,[3,4],5,6] <br>
 
-* with spread syntax *
-var mid = [3,4];
-var arr = [1,2,...mid,5,6] // 
-console.log(arr); // [1,2,3,4,5,6] 
+* with spread syntax *<br>
+var mid = [3,4];<br>
+var arr = [1,2,...mid,5,6] // <br>
+console.log(arr); // [1,2,3,4,5,6] <br>
 
 <h3><li>Math</li></h3>
-var arr = [2,3,8,6,0]
-* without spread syntax *
-function max(arr){
-    return Math.max.apply(null,arr);
-} 
+var arr = [2,3,8,6,0]<br>
+* without spread syntax *<br>
+function max(arr){<br>
+    return Math.max.apply(null,arr);<br>
+} <br>
 
-* with spread syntax *
-var max = Math.max(...arr)
+* with spread syntax *<br>
+var max = Math.max(...arr)<br>
 
 <h3><li>Copy an Array </li></h3>
-By using spread syntax, you can copy an array without by Referencing.
-* without spread syntax *
-var arr = ['a', 'b', 'c'];
-var arr2 = arr;
-arr2.push('d')  // ['a','b','c','d'] 
+By using spread syntax, you can copy an array without by Referencing.<br>
+* without spread syntax *<br>
+var arr = ['a', 'b', 'c'];<br>
+var arr2 = arr;<br>
+arr2.push('d')  // ['a','b','c','d'] <br>
 
-* with spread syntax *
-var arr = ['a', 'b', 'c'];
-var arr2 = [...arr]; // ['a','b','c'] copied successfully
+* with spread syntax *<br>
+var arr = ['a', 'b', 'c'];<br>
+var arr2 = [...arr]; // ['a','b','c'] copied successfully<br>
 
 <h3><li> String to Array </li></h3>
-var str = 'hello';
-var chars = [...str]; // ['h','e','l','l','o'];
+var str = 'hello';<br>
+var chars = [...str]; // ['h','e','l','l','o'];<br>
 </ul>
 
 <h2> Map</h2>
-Still leaning
+Still leaning<br>
 https://hackernoon.com/what-you-should-know-about-es6-maps-dc66af6b9a1e
 
 <h2>others</h2>
