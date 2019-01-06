@@ -45,7 +45,7 @@ Asyncroness = non-blocking = single threded;
 Mutable: Can Change Object and Array (Pass by Ref) Referring the same memory.
 Immutable: String, Numbers (Pass by Val) Passing the value instead of memory location.
 
-<a href='https://www.sitepoint.com/event-bubbling-javascript/>Event bubbling</a>
+<a href='https://www.sitepoint.com/event-bubbling-javascript/'##>Event bubbling</a>
 Nested tag. When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
 stopPropagation()
 
@@ -59,7 +59,7 @@ A Promise is an object representing the eventual completion or failure of an asy
 ## Compiler/Interpreter
 JS is interpreted language. C is Compiler
 
-<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions'>Regular Expression</a>
+##<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions'>Regular Expression</a>
 Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. 
 
 splice and slice
@@ -75,32 +75,38 @@ var myObject = {
 };
 delete myObject.regex;
 
-function declarations and function expressions and self invoking function
-(1) function expression
+## function declarations and function expressions and self invoking function
+<ol>
+<li> function expression</li>
 https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
 function func(ele){  // function declarations
     return
 }
 The function name is visible within it’s scope and the scope of it’s parent (which is good because otherwise it would be unreachable)
 Officially prohibited within non-function blocks such as (if statement)
-(2) function declarations
-const func = () => {} // function expressions
+
+<li> function declaration</li>
+const func = () => {} // function declaration
 Functions defined via Functions Expressions can be named or anonymous. Does not start with function
-(3)Self invoking function
+
+<li> self invoking function</li>
 function expression will execute automatically if the execution is followed by (). Can't self invoke function declarations
 (function () {
   var x = "Hello!!";      // I will invoke myself
 })();
+</ol>
+### Application Programming Interfaces (APIs)
 
-Application Programming Interfaces (APIs)
+###Differences between ES5 and ES6
+<ol>
+<li>Fat Arrow Functions</li>
+const example = (arg) => {};
 
-Differences between ES5 and ES6
-(1) Arrow Functions
-(2) Default parameters
+<li> Default parameters </li>
 function multiply(a, b = 1) {
   return a * b;
 }
-(3) Method definitinos 
+<li> Method definitinos </li>
  //ES5
  var obj = {
      foo: foo(){ return 'bar'}
@@ -109,7 +115,8 @@ function multiply(a, b = 1) {
  var obj = {    
      foo(){return 'bar'}
  }
- (4)rest parameters
+
+ <li>rest parameters</li>
  indefinite number of arguments
  function sum(...theArgs) {
   return theArgs.reduce((previous, current) => {
