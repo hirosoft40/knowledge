@@ -1,14 +1,14 @@
 <h1> JavaScript</h1>
-<h5>Is JavaScript OOP?</h5>
+<h3>Is JavaScript OOP?</h3>
 It is prototype based language. In ES6, class was implemented, but that is to implement prototype-based classes.
 
-<h5>What is prototype?</h5>
+<h3>What is prototype?</h3>
 Every object has prototype which makes inheritance possible. 
 
-<h5>What is syntactic sugar in ES6.</h5>
+<h3>What is syntactic sugar in ES6.</h3>
 構文Sugar
 
-<h5><a href='https://www.youtube.com/watch?v=PFmuCDHHpwk'>What is OOP?</a></h5>
+<h3><a href='https://www.youtube.com/watch?v=PFmuCDHHpwk'>What is OOP?</a></h3>
 A programing model based around the idea of objects
 https://www.quora.com/What-do-the-4-principles-of-OOP-mean
 <ol>
@@ -31,10 +31,10 @@ Now let see how polymorphism is implemented in your mobile.Every mobile has inbu
 Retrica which has different functionality but does the same work(clicking photos).
 </ol>
 
-<h5> What is closure?</h5>
+<h3> What is closure?</h3>
 A closure is a function that makes use of variables defined in outer functions that have previously returned.
 
-<h5> What is callback?</h5>
+<h3> What is callback?</h3>
 functions that can be passed as argument. When using, check typeof myFunc === 'function' because you forget what is this arguement is 
 (1) Event Handling => callback
 (2) AJAX
@@ -42,7 +42,7 @@ functions that can be passed as argument. When using, check typeof myFunc === 'f
 
 Asyncroness = non-blocking = single threded;
 
-<h5> <a href='https://developer.mozilla.org/en-US/docs/Glossary/Mutable'>Mutable/immutable:</a></h5>
+<h3> <a href='https://developer.mozilla.org/en-US/docs/Glossary/Mutable'>Mutable/immutable:</a></h3>
 Mutable: Can Change Object and Array (Pass by Ref) Referring the same memory.
 Immutable: String, Numbers (Pass by Val) Passing the value instead of memory location.
 
@@ -50,23 +50,23 @@ Immutable: String, Numbers (Pass by Val) Passing the value instead of memory loc
 Nested tag. When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
 stopPropagation()
 
-<h5> primitives</h5>
+<h3> primitives</h3>
 Not object and has no method.
 type: undefined, null, boolean, string and number
 
-<h5> Promise</h5>
+<h3> Promise</h3>
 A Promise is an object representing the eventual completion or failure of an asynchronous operation.
 
-<h5> Compiler/Interpreter</h5>
+<h3> Compiler/Interpreter</h3>
 JS is interpreted language. C is Compiler
 
-<h5><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions'>Regular </h5>Expression</a>
+<h3><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions'>Regular </h3>Expression</a>
 Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. 
 
-<h5>splice and slice</h5>
+<h3>splice and slice</h3>
 slice create new array
 
-<h5>how to delete object property</h5>
+<h3>how to delete object property</h3>
 http://perfectionkills.com/understanding-delete/
 delete only returns false when a property can not be deleted    
 var myObject = {
@@ -76,7 +76,7 @@ var myObject = {
 };
 delete myObject.regex;
 
-<h5> function declarations and function expressions and self invoking function</h5>
+<h3> function declarations and function expressions and self invoking function</h3>
 * reference : https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/
 
 <ol>
@@ -98,9 +98,9 @@ function expression will execute automatically if the execution is followed by (
 })();
 </ol>
 
-<h5>Application Programming Interfaces (APIs)</h5>
+<h3>Application Programming Interfaces (APIs)</h3>
 
-<h5>Differences between ES5 and ES6</h5>
+<h3>Differences between ES5 and ES6</h3>
 <ol>
 <li>Fat Arrow Functions</li>
 const example = (arg) => {};
