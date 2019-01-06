@@ -1,13 +1,13 @@
-## Is JavaScript OOP?
+### Is JavaScript OOP?
 It is prototype based language. In ES6, class was implemented, but that is to implement prototype-based classes.
 
-## What is prototype?
+### What is prototype?
 Every object has prototype which makes inheritance possible. 
 
-## What is syntactic sugar in ES6.
+### What is syntactic sugar in ES6.
 構文Sugar
 
-## <a href='https://www.youtube.com/watch?v=PFmuCDHHpwk'>What is OOP?</a>
+### <a href='https://www.youtube.com/watch?v=PFmuCDHHpwk'>What is OOP?</a>
 A programing model based around the idea of objects
 https://www.quora.com/What-do-the-4-principles-of-OOP-mean
 
