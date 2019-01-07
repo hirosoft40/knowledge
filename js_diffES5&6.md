@@ -3,26 +3,28 @@
 <h2><li>Fat Arrow Functions</li></h2>
 const example = (arg) => {};
 <h2><li>this</li></h2>
-something like python self.
-current execution context of a function
-function getType(){<br>
-  console.log(`Type is :${this.type}`)<br>
-};<br>
+<p>something like python self.current execution context of a function </p>
+
+&nbsp function getType(){<br>
+&nbsp&nbsp  console.log(`Type is :${this.type}`)<br>
+&nbsp };<br>
+
 var CRV = {<br>
-  type:'SUV',<br>
-  getType:getType<br>
+&nbsp  type:'SUV',<br>
+&nbsp  getType:getType<br>
 };<br>
+
 getType();<br>
 
 <h2><li>Objects literal</li></h2>
 if key and value are same, you can ommit one of them.
 
 function getCar(make, model, value){<br>
-  return {<br>
-    make,      // ES5 make:make,<br>
-    model,     // ES5 model:model,<br>
-    value      // ES5 value:value,<br>
-  }<br>
+&nbsp  return {<br>
+&nbsp&nbsp    make,      // ES5 make:make,<br>
+&nbsp&nbsp    model,     // ES5 model:model,<br>
+&nbsp&nbsp    value      // ES5 value:value,<br>
+&nbsp  }<br>
 }<br>
 <h2><li> <a href = 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes'>Classes </a></li></h2>
 Classes are special functions. The class syntax has class expression and class declarations.
@@ -30,68 +32,68 @@ Classes are special functions. The class syntax has class expression and class d
 Use class keyword with the name of the class. Class declarations are not hoisted like function declarations. Hence, first declare class and then access it.
 <h4>+++ ES6 +++</h4>
 class Person {<br>
-  constructor(name, age, gender){<br>
-    this.name = name;<br>
-    this.age = age;<br>
-    this.gender = gender;<br>
+&nbsp  constructor(name, age, gender){<br>
+&nbsp&nbsp    this.name = name;<br>
+&nbsp&nbsp    this.age = age;<br>
+&nbsp&nbsp    this.gender = gender;<br>
   }<br>
-  incrementAge(){<br>
-    this.age += 1;<br>
+&nbsp  incrementAge(){<br>
+&nbsp&nbsp    this.age += 1;<br>
   }<br>
 }<br>
 
 class Personal extends Person{<br>
-  constructor(name, age, gender, occupation, hobby){<br>
-    super(name, age, gender);<br>
-    this.occupation = occupation;<br>
-    this.hobby = hobby;<br>
-  }<br>
-  incrementAge(){<br>
-    super.incrementAge();<br>
-    this.age += 20;<br>
-    console.log(this.age);<br>
-  }<br>
+&nbsp  constructor(name, age, gender, occupation, hobby){<br>
+&nbsp&nbsp    super(name, age, gender);<br>
+&nbsp&nbsp    this.occupation = occupation;<br>
+&nbsp&nbsp    this.hobby = hobby;<br>
+&nbsp  }<br>
+&nbsp  incrementAge(){<br>
+&nbsp&nbsp    super.incrementAge();<br>
+&nbsp&nbsp    this.age += 20;<br>
+&nbsp&nbsp    console.log(this.age);<br>
+&nbsp  }<br>
 }<br>
 
 <h4>+++ ES5 +++</h4>
 function Person (name, age, gender){<br>
-  this.name = name;<br>
-  this.age = age;<br>
-  this.gender = gender;<br>
+&nbsp  this.name = name;<br>
+&nbsp  this.age = age;<br>
+&nbsp  this.gender = gender;<br>
 }<br>
 Person.prototype.incrementAge = function(){<br>
-  return this.age += 1;<br>
+&nbsp  return this.age += 1;<br>
 }<br>
 function Personal(name, age, gender, occupation, hobby){<br>
-  Person.call(this, name, age, gender);<br>
-  this.occupation = occupation;<br>
-  this.hobby = hobby;<br>
+&nbsp  Person.call(this, name, age, gender);<br>
+&nbsp  this.occupation = occupation;<br>
+&nbsp  this.hobby = hobby;<br>
 }<br>
 Personal.prototype = Object.create(Person.prototype);<br>
 Personal.prototype.constructor = Personal;<br>
 Personal.prototype.incrementAge = function(){<br>
-  Person.prototype.incrementAge.call(this);<br>
-  this.age += 20;<br>
-  console.log(this.age);<br>
+&nbsp  Person.prototype.incrementAge.call(this);<br>
+&nbsp  this.age += 20;<br>
+&nbsp  console.log(this.age);<br>
 ;}<br>
 
 <h3>[2]class expression</h3>
 class expression can be named or unnabled. The name given to a named class expressionis local to class's body.<br>
 // unnamed<br>
 let Rectangle = class {  // class body start<br>
-  constructor(height, width){  // same as __init__ 1 constructor per class<br>
-    this.height = height;       // can use super keyword to call the super class<br>
-    this.width = width;         // constructor of the super class<br>
-  }<br>
+&nbsp  constructor(height, width){  // same as __init__ 1 constructor per class<br>
+&nbsp&nbsp    this.height = height;       // can use super keyword to call the super class<br>
+&nbsp&nbsp    this.width = width;         // constructor of the super class<br>
+&nbsp  }<br>
 };<br>
 console.log(Rectangle.name);<br>
 
 //named<br>
 let Rectangle = class Rectangle2 {<br>
-  constructor (height, width){<br>
-    this.height = height;<br>
-    this.width = width;<br>
-  }<br>
+&nbsp  constructor (height, width){<br>
+&nbsp&nbsp    this.height = height;<br>
+&nbsp&nbsp    this.width = width;<br>
+&nbsp  }<br>
 };<br>
 console.log(Rectangle.name);<br>
 <h2><li>Destructing assignment syntax</li></h2>
@@ -111,24 +113,25 @@ nickelodeon`<br>
 
 <h2><li> Default parameters </li></h2>
 function multiply(a, b = 1) {<br>
-  return a * b;<br>
+&nbsp  return a * b;<br>
 }<br>
 <h2><li> Method definitinos </li></h2>
- //ES5<br>
- var obj = {<br>
-     foo: foo(){ return 'bar'}<br>
+//ES5<br>
+var obj = {<br>
+&nbsp     foo: foo(){ return 'bar'}<br>
  };<br>
+
  //ES6<br>
  var obj = {    <br>
-     foo(){return 'bar'}<br>
+&nbsp     foo(){return 'bar'}<br>
  }<br>
 
 <h2> <li>Rest parameters</li></h2>
- indefinite number of arguments<br>
+ <p>indefinite number of arguments</p>
  function sum(...theArgs) {<br>
-  return theArgs.reduce((previous, current) => {<br>
-    return previous + current;<br>
-  });<br>
+&nbsp  return theArgs.reduce((previous, current) => {<br>
+&nbsp&nbsp    return previous + current;<br>
+&nbsp&nbsp  });<br>
 }<br>
 
 <h2><li>Spread Syntax (...)</li></h2>
@@ -151,7 +154,7 @@ console.log(arr); // [1,2,3,4,5,6] <br>
 var arr = [2,3,8,6,0]<br>
 * without spread syntax *<br>
 function max(arr){<br>
-    return Math.max.apply(null,arr);<br>
+&nbsp    return Math.max.apply(null,arr);<br>
 } <br>
 
 * with spread syntax *<br>
