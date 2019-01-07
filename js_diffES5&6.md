@@ -5,131 +5,131 @@ const example = (arg) => {};
 <h2><li>this</li></h2>
 something like python self.
 current execution context of a function
-function getType(){
-  console.log(`Type is :${this.type}`)
-};
-var CRV = {
-  type:'SUV',
-  getType:getType
-};
-getType();
+function getType(){<br>
+  console.log(`Type is :${this.type}`)<br>
+};<br>
+var CRV = {<br>
+  type:'SUV',<br>
+  getType:getType<br>
+};<br>
+getType();<br>
 
 <h2><li>Objects literal</li></h2>
 if key and value are same, you can ommit one of them.
 
-function getCar(make, model, value){
-  return {
-    make,      // ES5 make:make,
-    model,     // ES5 model:model,
-    value      // ES5 value:value,
-  }
-}
+function getCar(make, model, value){<br>
+  return {<br>
+    make,      // ES5 make:make,<br>
+    model,     // ES5 model:model,<br>
+    value      // ES5 value:value,<br>
+  }<br>
+}<br>
 <h2><li> <a href = 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes'>Classes </a></li></h2>
 Classes are special functions. The class syntax has class expression and class declarations.
 <h3>[1]class declarations </h3>
 Use class keyword with the name of the class. Class declarations are not hoisted like function declarations. Hence, first declare class and then access it.
 <h4>+++ ES6 +++</h4>
-<code>class Person {
-  constructor(name, age, gender){
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-  }
-  incrementAge(){
-    this.age += 1;
-  }
-}
+class Person {<br>
+  constructor(name, age, gender){<br>
+    this.name = name;<br>
+    this.age = age;<br>
+    this.gender = gender;<br>
+  }<br>
+  incrementAge(){<br>
+    this.age += 1;<br>
+  }<br>
+}<br>
 
-class Personal extends Person{
-  constructor(name, age, gender, occupation, hobby){
-    super(name, age, gender);
-    this.occupation = occupation;
-    this.hobby = hobby;
-  }
-  incrementAge(){
-    super.incrementAge();
-    this.age += 20;
-    console.log(this.age);
-  }
-}
-</code>
+class Personal extends Person{<br>
+  constructor(name, age, gender, occupation, hobby){<br>
+    super(name, age, gender);<br>
+    this.occupation = occupation;<br>
+    this.hobby = hobby;<br>
+  }<br>
+  incrementAge(){<br>
+    super.incrementAge();<br>
+    this.age += 20;<br>
+    console.log(this.age);<br>
+  }<br>
+}<br>
+
 <h4>+++ ES5 +++</h4>
-function Person (name, age, gender){
-  this.name = name;
-  this.age = age;
-  this.gender = gender;
-}
-Person.prototype.incrementAge = function(){
-  return this.age += 1;
-}
-function Personal(name, age, gender, occupation, hobby){
-  Person.call(this, name, age, gender);
-  this.occupation = occupation;
-  this.hobby = hobby;
-}
-Personal.prototype = Object.create(Person.prototype);
-Personal.prototype.constructor = Personal;
-Personal.prototype.incrementAge = function(){
-  Person.prototype.incrementAge.call(this);
-  this.age += 20;
-  console.log(this.age);
-;}
+function Person (name, age, gender){<br>
+  this.name = name;<br>
+  this.age = age;<br>
+  this.gender = gender;<br>
+}<br>
+Person.prototype.incrementAge = function(){<br>
+  return this.age += 1;<br>
+}<br>
+function Personal(name, age, gender, occupation, hobby){<br>
+  Person.call(this, name, age, gender);<br>
+  this.occupation = occupation;<br>
+  this.hobby = hobby;<br>
+}<br>
+Personal.prototype = Object.create(Person.prototype);<br>
+Personal.prototype.constructor = Personal;<br>
+Personal.prototype.incrementAge = function(){<br>
+  Person.prototype.incrementAge.call(this);<br>
+  this.age += 20;<br>
+  console.log(this.age);<br>
+;}<br>
 
 <h3>[2]class expression</h3>
-class expression can be named or unnabled. The name given to a named class expressionis local to class's body.
-// unnamed
-let Rectangle = class {  // class body start
-  constructor(height, width){  // same as __init__ 1 constructor per class
-    this.height = height;       // can use super keyword to call the super class
-    this.width = width;         // constructor of the super class
-  }
-};
-console.log(Rectangle.name);
+class expression can be named or unnabled. The name given to a named class expressionis local to class's body.<br>
+// unnamed<br>
+let Rectangle = class {  // class body start<br>
+  constructor(height, width){  // same as __init__ 1 constructor per class<br>
+    this.height = height;       // can use super keyword to call the super class<br>
+    this.width = width;         // constructor of the super class<br>
+  }<br>
+};<br>
+console.log(Rectangle.name);<br>
 
-//named
-let Rectangle = class Rectangle2 {
-  constructor (height, width){
-    this.height = height;
-    this.width = width;
-  }
-};
-console.log(Rectangle.name);
+//named<br>
+let Rectangle = class Rectangle2 {<br>
+  constructor (height, width){<br>
+    this.height = height;<br>
+    this.width = width;<br>
+  }<br>
+};<br>
+console.log(Rectangle.name);<br>
 <h2><li>Destructing assignment syntax</li></h2>
 Destructuring allows us to extract values from arrays and objects(even deeply nested) and store them in variable with a more convenient syntax.
-let [a,b,c,d] = [1,2,3,4];
-let luke = {occupation:'jedi',father:'anakin'};
-let {occupation, father} = luke; // console.log(occupation) //'jedi'
+let [a,b,c,d] = [1,2,3,4];<br>
+let luke = {occupation:'jedi',father:'anakin'};<br>
+let {occupation, father} = luke; // console.log(occupation) //'jedi'<br>
 
 
 <h2><li>Template Literal / Interpolation(${name})</li></h2>
-let text= `${name} said, "Hello" to me the other day.`
+let text= `${name} said, "Hello" to me the other day.`<br>
 
-let text = (`cat
-dog               // no need to put \n for new line
-nickelodeon`
-);
+let text = (`cat<br>
+dog               // no need to put \n for new line<br>
+nickelodeon`<br>
+);<br>
 
 <h2><li> Default parameters </li></h2>
-function multiply(a, b = 1) {
-  return a * b;
-}
+function multiply(a, b = 1) {<br>
+  return a * b;<br>
+}<br>
 <h2><li> Method definitinos </li></h2>
- //ES5
- var obj = {
-     foo: foo(){ return 'bar'}
- };
- //ES6
- var obj = {    
-     foo(){return 'bar'}
- }
+ //ES5<br>
+ var obj = {<br>
+     foo: foo(){ return 'bar'}<br>
+ };<br>
+ //ES6<br>
+ var obj = {    <br>
+     foo(){return 'bar'}<br>
+ }<br>
 
 <h2> <li>Rest parameters</li></h2>
- indefinite number of arguments
- function sum(...theArgs) {
-  return theArgs.reduce((previous, current) => {
-    return previous + current;
-  });
-}
+ indefinite number of arguments<br>
+ function sum(...theArgs) {<br>
+  return theArgs.reduce((previous, current) => {<br>
+    return previous + current;<br>
+  });<br>
+}<br>
 
 <h2><li>Spread Syntax (...)</li></h2>
 [reference] <a href='https://codeburst.io/javascript-es6-the-spread-syntax-f5c35525f754'>Medium blog by Brandon Morelli</a><br>
@@ -178,8 +178,8 @@ Still leaning<br>
 https://hackernoon.com/what-you-should-know-about-es6-maps-dc66af6b9a1e
 
 <h2>others</h2>
-Module Loaders
-Weak set
-New Library
-Promises
-Proxies
+<p>Module Loaders</p>
+<p>Weak set</p>
+<p>New Library</p>
+<p>Promises</p>
+<p>Proxies</p>
