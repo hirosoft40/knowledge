@@ -21,9 +21,9 @@ if key and value are same, you can ommit one of them.
 
 function getCar(make, model, value){<br>
 &nbsp;  return {<br>
-&nbsp;&nbsp;    make,      // ES5 make:make,<br>
-&nbsp;&nbsp;    model,     // ES5 model:model,<br>
-&nbsp;&nbsp;    value      // ES5 value:value,<br>
+&nbsp;&nbsp;    make,      &nbsp;// ES5 make:make,<br>
+&nbsp;&nbsp;    model,     &nbsp;// ES5 model:model,<br>
+&nbsp;&nbsp;    value      &nbsp;// ES5 value:value,<br>
 &nbsp;  }<br>
 }<br>
 <h2><li> <a href = 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes'>Classes </a></li></h2>
@@ -81,9 +81,9 @@ Personal.prototype.incrementAge = function(){<br>
 class expression can be named or unnabled. The name given to a named class expressionis local to class's body.<br>
 // unnamed<br>
 let Rectangle = class {  // class body start<br>
-&nbsp;  constructor(height, width){  // same as __init__ 1 constructor per class<br>
-&nbsp;&nbsp;    this.height = height;       // can use super keyword to call the super class<br>
-&nbsp;&nbsp;    this.width = width;         // constructor of the super class<br>
+&nbsp;  constructor(height, width){  &nbsp;// same as __init__ 1 constructor per class<br>
+&nbsp;&nbsp;    this.height = height;       &nbsp;// can use super keyword to call the super class<br>
+&nbsp;&nbsp;    this.width = width;         &nbsp;// constructor of the super class<br>
 &nbsp;  }<br>
 };<br>
 console.log(Rectangle.name);<br>
@@ -100,14 +100,14 @@ console.log(Rectangle.name);<br>
 Destructuring allows us to extract values from arrays and objects(even deeply nested) and store them in variable with a more convenient syntax.
 let [a,b,c,d] = [1,2,3,4];<br>
 let luke = {occupation:'jedi',father:'anakin'};<br>
-let {occupation, father} = luke; // console.log(occupation) //'jedi'<br>
+let {occupation, father} = luke; &nbsp;// console.log(occupation) //'jedi'<br>
 
 
 <h2><li>Template Literal / Interpolation(${name})</li></h2>
 let text= `${name} said, "Hello" to me the other day.`<br>
 
 let text = (`cat<br>
-dog               // no need to put \n for new line<br>
+dog               &nbsp;// no need to put \n for new line<br>
 nickelodeon`<br>
 );<br>
 
@@ -143,12 +143,12 @@ It allows an iterable to expand in places where 0+ arguments are expected.
 * without spread syntax *<br>
 var mid = [3,4];<br>
 var arr = [1,2,mid,5,6] <br>
-console.log(arr); // [1,2,[3,4],5,6] <br>
+console.log(arr); &nbsp;// [1,2,[3,4],5,6] <br>
 
 * with spread syntax *<br>
 var mid = [3,4];<br>
-var arr = [1,2,...mid,5,6] // <br>
-console.log(arr); // [1,2,3,4,5,6] <br>
+var arr = [1,2,...mid,5,6] &nbsp;// <br>
+console.log(arr); &nbsp;// [1,2,3,4,5,6] <br>
 
 <h3><li>Math</li></h3>
 var arr = [2,3,8,6,0]<br>
@@ -169,11 +169,11 @@ arr2.push('d')  // ['a','b','c','d'] <br>
 
 * with spread syntax *<br>
 var arr = ['a', 'b', 'c'];<br>
-var arr2 = [...arr]; // ['a','b','c'] copied successfully<br>
+var arr2 = [...arr]; &nbsp;// ['a','b','c'] copied successfully<br>
 
 <h3><li> String to Array </li></h3>
 var str = 'hello';<br>
-var chars = [...str]; // ['h','e','l','l','o'];<br>
+var chars = [...str]; &nbsp;// ['h','e','l','l','o'];<br>
 </ul>
 
 <h2> Map</h2>
