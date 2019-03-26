@@ -8,7 +8,7 @@ There are many many languages to learn, so I decided to list up for my convenien
 
 <li>Redux Thunk</li>
 <li>Redux Forms</li>
-<li>React Component API</li>
+<li>React Context API</li>
 <li>Progressive Web App</li>
 <li>Testing (Jest and Enzime)</li>
 <li>Testing (Mocha and Chai)</li>
@@ -25,6 +25,12 @@ There are many many languages to learn, so I decided to list up for my convenien
 <h3>Projects</h3>
 <ol> 
 <li>Todo in React/Redux -> detail</li>
+<li></li>
+
+<h3>Helpful Resources</h3>
+<ol> 
+<li>React Context API</li>
+https://www.youtube.com/watch?v=cBM5xXyekmM
 <li></li>
 
 </ol>
